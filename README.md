@@ -33,6 +33,9 @@ chmod +x ~/.config/scripts/*.sh
 
 
 mkdir -p ~/Pictures/wallpapers
+
+
+
 cp /шлях/до/картинок/* ~/Pictures/wallpapers/
 
 
