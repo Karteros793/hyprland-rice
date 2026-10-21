@@ -15,7 +15,11 @@ SUPER+1..6 воркспейси | Alt+Shift EN/UA | SUPER+Shift+R перезав
 
 
 sudo pacman -S --needed git
+
+
 git clone https://github.com/Karteros793/hyprland-rice.git
+
+
 cd hyprland-rice
 
 
