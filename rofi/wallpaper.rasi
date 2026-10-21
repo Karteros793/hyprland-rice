@@ -1,0 +1,18 @@
+* {
+  bg: #14161af0;
+  fg: #e8e4c9;
+  sel-bg: #e8e4c9;
+  sel-fg: #14161a;
+  font: "JetBrainsMono Nerd Font 9";
+}
+configuration { show-icons: true; }
+window { width: 520px; background-color: @bg; border: 1px; border-color: #2a2c33; border-radius: 6px; }
+mainbox { children: [ inputbar, listview ]; background-color: transparent; }
+inputbar { children: [ prompt, entry ]; padding: 8px; background-color: #0e0f12; spacing: 8px; }
+prompt { text-color: #8d8b78; }
+entry { text-color: @fg; }
+listview { columns: 3; lines: 3; padding: 10px; spacing: 10px; flow: horizontal; background-color: transparent; }
+element { orientation: vertical; padding: 8px; border-radius: 6px; spacing: 6px; background-color: transparent; text-color: @fg; }
+element selected.normal { background-color: @sel-bg; text-color: @sel-fg; }
+element-icon { size: 64px; horizontal-align: 0.5; background-color: transparent; }
+element-text { horizontal-align: 0.5; background-color: transparent; text-color: inherit; }

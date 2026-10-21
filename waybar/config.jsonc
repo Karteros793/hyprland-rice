@@ -1,0 +1,58 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 28,
+  "margin-top": 6,
+  "margin-left": 12,
+  "margin-right": 12,
+  "spacing": 6,
+  "modules-left": ["hyprland/workspaces", "custom/wm"],
+  "modules-center": ["clock"],
+  "modules-right": ["hyprland/language", "network", "pulseaudio", "pulseaudio#mic", "cpu", "memory", "tray", "custom/power"],
+  "hyprland/workspaces": {
+    "format": "{id}",
+    "persistent-workspaces": { "*": 6 },
+    "on-click": "activate"
+  },
+  "custom/wm": { "format": "Hyprland", "tooltip": false },
+  "clock": {
+    "format": "{:%a %d, %b %Y}  <span background='#e8e4c9' foreground='#14161a'> {:%H:%M:%S} </span>",
+    "interval": 1,
+    "tooltip": false
+  },
+  "hyprland/language": {
+    "format": "󰌌 {short}",
+    "format-en": "󰌌 EN",
+    "format-uk": "󰌌 UA"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 mute",
+    "format-icons": { "default": ["", "", ""] },
+    "on-click": "pavucontrol"
+  },
+  "pulseaudio#mic": {
+    "format": "{format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": " off",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+  },
+  "network": {
+    "format-wifi": "wifi {signalStrength}%",
+    "format-ethernet": "eth",
+    "format-disconnected": "no net",
+    "tooltip-format-wifi": "{essid}",
+    "on-click": "~/.config/scripts/wifi.sh",
+    "on-click-right": "kitty -e nmtui"
+  },
+
+  "cpu":    { "format": " {usage}%", "interval": 2 },
+  "memory": { "format": " {percentage}%", "interval": 5 },
+  "tray":   { "spacing": 8 },
+
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": false,
+    "on-click": "~/.config/scripts/power.sh"
+  }
+}

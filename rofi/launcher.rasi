@@ -1,0 +1,24 @@
+* {
+  bg: #14161af0;
+  fg: #e8e4c9;
+  fg-dim: #8d8b78;
+  sel-bg: #e8e4c9;
+  sel-fg: #14161a;
+  font: "JetBrainsMono Nerd Font 10";
+}
+configuration {
+  modes: "drun";
+  display-drun: "drun";
+  show-icons: true;
+  drun-display-format: "{name} [<span size='x-small'><i>({generic})</i></span>]";
+}
+window { width: 500px; background-color: @bg; border: 1px; border-color: #2a2c33; border-radius: 6px; location: center; }
+mainbox { children: [ inputbar, listview ]; background-color: transparent; }
+inputbar { children: [ prompt, entry ]; padding: 8px; background-color: #0e0f12; spacing: 8px; }
+prompt { text-color: @fg-dim; }
+entry { text-color: @fg; placeholder: ""; }
+listview { lines: 6; padding: 6px; spacing: 4px; background-color: transparent; }
+element { padding: 6px 8px; border-radius: 4px; text-color: @fg; background-color: transparent; spacing: 8px; }
+element selected.normal { background-color: @sel-bg; text-color: @sel-fg; }
+element-icon { size: 20px; background-color: transparent; }
+element-text { background-color: transparent; text-color: inherit; }

@@ -1,0 +1,13 @@
+[general]
+bars = 40
+framerate = 60
+
+[output]
+method = ncurses
+orientation = bottom
+
+[color]
+foreground = '#e8e4c9'
+
+[smoothing]
+noise_reduction = 70
